@@ -44,7 +44,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light iridakos-navbar">
     <div class="container-fluid no-gutters">
-      
+
 
       <a class="mr-3 blog-logo-container" href="/" alt="home">
         <img class="blog-logo" src="/assets/images/irida-faded.png">
@@ -56,7 +56,7 @@
 
       <div class="collapse navbar-collapse" id="header-pages">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          
+
 
           <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,25 +74,25 @@
             </div>
           </li>
 
-          
+
 
           <li class="nav-item ">
               <a class="nav-link" href="/cats/" alt="cats">cats</a>
           </li>
 
-          
+
 
           <li class="nav-item ">
               <a class="nav-link" href="/painting/" alt="painting">painting</a>
           </li>
 
-          
+
 
           <li class="nav-item ">
               <a class="nav-link" href="/tags/" alt="tags">tags</a>
           </li>
 
-          
+
 
           <li class="nav-item ">
               <a class="nav-link" href="/about/" alt="about">about me</a>
@@ -107,7 +107,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="more">
-              
+
               <a class="dropdown-item" href="/el/programming/2019/11/13/bash-programmable-completion-tutorial">Ελληνικά</a>
             </div>
           </li>
@@ -138,7 +138,7 @@
               <div class="page-subtitle">
               A tutorial for adding tab completion to your scripts using the Bash Programmable Completion functionality.
 
-              
+
                 <div class="post">
                   <div class="post-metadata">
                     <div class="post-date" title="published on">
@@ -150,31 +150,31 @@
                     </div>
                   </div>
 
-                  
-                  
+
+
                     <div class="post-tags">
                       <span class="important">tags:</span>
-                      
-                        <a href="/tags/?tag=bash">bash</a> - 
-                      
-                        <a href="/tags/?tag=linux">linux</a> - 
-                      
-                        <a href="/tags/?tag=programmable-completion">programmable-completion</a> - 
-                      
-                        <a href="/tags/?tag=opensource">opensource</a> - 
-                      
-                        <a href="/tags/?tag=tutorial">tutorial</a> - 
-                      
-                        <a href="/tags/?tag=how-to">how-to</a> - 
-                      
-                        <a href="/tags/?tag=featured">featured</a>
-                      
-                    </div>
-                  
 
-                  
-                  
-                  
+                        <a href="/tags/?tag=bash">bash</a> -
+
+                        <a href="/tags/?tag=linux">linux</a> -
+
+                        <a href="/tags/?tag=programmable-completion">programmable-completion</a> -
+
+                        <a href="/tags/?tag=opensource">opensource</a> -
+
+                        <a href="/tags/?tag=tutorial">tutorial</a> -
+
+                        <a href="/tags/?tag=how-to">how-to</a> -
+
+                        <a href="/tags/?tag=featured">featured</a>
+
+                    </div>
+
+
+
+
+
                     <!--googleoff: index-->
                     <div class="my-3">
                       <small>
@@ -182,9 +182,9 @@
                       </small>
                     </div>
                     <!--googleon: index-->
-                  
+
                 </div>
-              
+
             </div>
           </div>
         </div>
@@ -227,7 +227,7 @@
     <div class="container-fluid no-gutters">
       <div class="row">
         <div class="col-xs-12 col-md-8 col-lg-9 page-content">
-          
+
             <div class="row">
               <div class="col-12">
                 <div class="outline mb-3">
@@ -244,8 +244,8 @@
 <p>Bash completion is a functionality through which bash helps users type their commands faster and easier. It accomplishes that by presenting possible options when users press the <code class="highlighter-rouge">tab</code> key while typing a command.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git&lt;tab&gt;&lt;tab&gt;
-git                 git-receive-pack    git-upload-archive  
-gitk                git-shell           git-upload-pack     
+git                 git-receive-pack    git-upload-archive
+gitk                git-shell           git-upload-pack
 <span class="nv">$ </span>git-s&lt;tab&gt;
 <span class="nv">$ </span>git-shell
 </code></pre></div></div>
@@ -487,7 +487,7 @@ _dothis_completions<span class="o">()</span>
 </code></pre></div></div>
 <p>Source and there you are:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>dothis
-never     now       tomorrow  
+never     now       tomorrow
 <span class="nv">$ </span>dothis n
 never  now
 </code></pre></div></div>
@@ -530,6 +530,65 @@ _dothis_completions<span class="o">()</span>
 647 <span class="nb">source </span>dothis-completion.bash   664 dothis                          681 clear
 648 clear                           665 <span class="nb">cat</span> ~/.bashrc
 </code></pre></div></div>
+
+<p>DDD: ...nope, I get:
+  <blockquote>
+    <pre>
+$ dothis
+Display all 102 possibilities? (y or n)
+$s/\t/                                    58
+--                                        59
+--13                                      60
+-10                                       61
+-100                                      62
+-W                                        63
+-a                                        64
+-e                                        65
+-l                                        66
+-s                                        67
+-vet                                      68
+.                                         69
+/                                         70
+/Users/ddd/ds/env/complete-dothis.bash    71
+/Users/ddd/ds/env/dothis-completion.bash  72
+/bin/echo                                 73
+1                                         74
+2                                         75
+22                                        76
+29                                        77
+2>/dev/null                               78
+2w                                        IFRX
+3                                         ^dothis
+30                                        _comp_debug
+31                                        _comp_debug_dothis=
+32                                        _comp_debug_dothis=1
+33                                        _dothis_completions
+34                                        a\tb
+35                                        bin
+36                                        builtin
+37                                        cat
+38                                        compgen
+39                                        dothis
+40                                        echo
+41                                        fc
+42                                        grep
+43                                        ls
+44                                        n
+45                                        never
+46                                        now
+47                                        pwd
+48                                        release
+49                                        s/\t/
+50                                        s/\t//
+51                                        sed
+52                                        tomorrow
+53                                        uname
+54                                        x
+55                                        x86_64-apple-darwin18
+--More--
+    </pre>
+  </blockquote>
+</p>
 
 <p>Not bad.</p>
 
@@ -646,9 +705,9 @@ _dothis_completions<span class="o">()</span>
 <p>Source and test:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dothis &lt;tab&gt;&lt;tab&gt;
 ...
-499 <span class="nb">source </span>dothis-completion.bash                   
+499 <span class="nb">source </span>dothis-completion.bash
 500 clear
-...       
+...
 503 dothis 500
 </code></pre></div></div>
 
@@ -745,7 +804,7 @@ _dothis_completions<span class="o">()</span>
                 </div>
               </div>
             </div>
-          
+
 
           <!--googleoff: index-->
 
@@ -760,7 +819,7 @@ _dothis_completions<span class="o">()</span>
 <div class="post-navigation">
   <div class="row">
     <div class="col-12 col-md-4 my-3">
-      
+
         <a class="d-block btn btn-light btn-sm h-100" href="/programming/2018/01/25/creating-a-gtk-todo-application-with-ruby" title="Creating a Linux Desktop application with Ruby">
           <strong>
             <i class="fa fa-angle-double-left"></i> previous post
@@ -772,11 +831,11 @@ _dothis_completions<span class="o">()</span>
             Creating a Linux Desktop application with Ruby
           </small>
         </a>
-      
+
     </div>
 
     <div class="col-12 col-md-4 offset-md-4 my-3">
-      
+
         <a class="d-block btn btn-light btn-sm h-100" href="/programming/2018/03/28/custom-http-headers" title="How to add a custom HTTP header in Rails">
           <strong>
             next post <i class="fa fa-angle-double-right"></i>
@@ -788,7 +847,7 @@ _dothis_completions<span class="o">()</span>
             How to add a custom HTTP header in Rails
           </small>
         </a>
-      
+
     </div>
   </div>
 </div>
@@ -796,10 +855,10 @@ _dothis_completions<span class="o">()</span>
 
 <!--googleon: index-->
 
-          
 
 
-  
+
+
     <div class="alert alert-light related-posts">
       <h4 class="alert-heading"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> My latest post</h4>
 
@@ -812,618 +871,618 @@ _dothis_completions<span class="o">()</span>
         </div>
       </div>
     </div>
-  
 
 
-          
+
+
 <div class="alert alert-light related-posts">
   <h4 class="alert-heading"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Related posts</h4>
 
-  
+
 
   <ul class="list-unstyled">
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <li>
           <a class="alert-link" href="/programming/2019/05/16/remove-duplicate-lines-preserving-order-linux"><strong>How to remove duplicate lines from files preserving their order</strong></a>
           <div>
             <small>How to remove duplicate lines of a file in Linux without sorting or changing their order (awk one-liner explained).</small>
           </div>
         </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <li>
           <a class="alert-link" href="/programming/2020/02/06/shell-palindrome-dates"><strong>Find palindrome dates in the Linux command line - explained</strong></a>
           <div>
             <small>Explaining how to find palindrome dates using a shell command in Linux</small>
           </div>
         </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <li>
           <a class="alert-link" href="/programming/2019/04/10/shell-navigation-with-autocomplete"><strong>How to alias and navigate to directories with autocomplete in Linux</strong></a>
           <div>
             <small>A Linux shell script for registering directory aliases and navigating to them with tab completion.</small>
           </div>
         </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <li>
           <a class="alert-link" href="/programming/2018/01/25/creating-a-gtk-todo-application-with-ruby"><strong>Creating a Linux Desktop application with Ruby</strong></a>
           <div>
             <small>A tutorial for creating a simple GTK ToDo application with Ruby</small>
           </div>
         </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </ul>
 </div>
 
 
-          
+
 <div class="share-links">
   <a class="btn btn-light" href="https://twitter.com/intent/tweet?text=Creating a bash completion script&url=https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
   <a class="btn btn-light" href="https://facebook.com/sharer.php?u=https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
@@ -1457,7 +1516,7 @@ _dothis_completions<span class="o">()</span>
         <div class="col">
           <!--googleoff: index-->
 <div class="sidebar">
-  
+
     <div class="alert alert-primary d-none d-md-block">
       <div class="sidebar-section">
         <a class="btn btn-warning d-block collapsed text-left"
@@ -1483,9 +1542,9 @@ _dothis_completions<span class="o">()</span>
         </div>
       </div>
     </div>
-  
 
-  
+
+
 
   <div class="alert alert-primary">
   <div class="sidebar-section">
@@ -1494,94 +1553,94 @@ _dothis_completions<span class="o">()</span>
     </div>
 
     <div class="section-content">
-      
-      
-        
+
+
+
           <div class="section-item">
             <div class="float-right ml-1">
-              
+
                 <span class="featured-hacker-news" title="Featured in Hacker News" data-toggle="tooltip"><i class="fa fa-hacker-news"></i></span>
-              
+
                 <span class="featured-opensource-com" title="Featured in opensource.com" data-toggle="tooltip"><i class="fa fa-linux"></i></span>
-              
+
                 <span class="featured-hackernewsletter" title="Featured in hackernewsletter" data-toggle="tooltip"><i class="fa fa-envelope"></i></span>
-              
+
             </div>
             <a href="/programming/2018/03/01/bash-programmable-completion-tutorial">Creating a bash completion script</a>
              <div class="text-muted smaller">
                A tutorial for adding tab completion to your scripts using the Bash Programmable Completion functionality.
              </div>
           </div>
-        
-      
-        
+
+
+
           <div class="section-item">
             <div class="float-right ml-1">
-              
+
                 <span class="featured-hacker-news" title="Featured in Hacker News" data-toggle="tooltip"><i class="fa fa-hacker-news"></i></span>
-              
+
                 <span class="featured-ruby-weekly" title="Featured in Ruby Weekly" data-toggle="tooltip"><i class="fa fa-diamond"></i></span>
-              
+
                 <span class="featured-opensource-com" title="Featured in opensource.com" data-toggle="tooltip"><i class="fa fa-linux"></i></span>
-              
+
             </div>
             <a href="/programming/2018/01/25/creating-a-gtk-todo-application-with-ruby">Creating a Linux Desktop application with Ruby</a>
              <div class="text-muted smaller">
                A tutorial for creating a simple GTK ToDo application with Ruby
              </div>
           </div>
-        
-      
-        
+
+
+
           <div class="section-item">
             <div class="float-right ml-1">
-              
+
                 <span class="featured-farnam-street" title="Featured in Farnam Street" data-toggle="tooltip">fs <i class="fa fa-envelope"></i></span>
-              
+
                 <span class="featured-hacker-news" title="Featured in Hacker News" data-toggle="tooltip"><i class="fa fa-hacker-news"></i></span>
-              
+
                 <span class="featured-betterldevlink" title="Featured in Better Dev Link" data-toggle="tooltip"><i class="fa fa-envelope"></i></span>
-              
+
             </div>
             <a href="/programming/2019/06/26/composing-better-emails">How to write better emails</a>
              <div class="text-muted smaller">
                Tips for composing effective emails avoiding misunderstandings with examples from the software development world.
              </div>
           </div>
-        
-      
-        
+
+
+
           <div class="section-item">
             <div class="float-right ml-1">
-              
+
                 <span class="featured-hacker-news" title="Featured in Hacker News" data-toggle="tooltip"><i class="fa fa-hacker-news"></i></span>
-              
+
                 <span class="featured-hackernewsletter" title="Featured in hackernewsletter" data-toggle="tooltip"><i class="fa fa-envelope"></i></span>
-              
+
                 <span class="featured-opensource-com" title="Featured in opensource.com" data-toggle="tooltip"><i class="fa fa-linux"></i></span>
-              
+
             </div>
             <a href="/programming/2019/05/16/remove-duplicate-lines-preserving-order-linux">How to remove duplicate lines from files preserving their order</a>
              <div class="text-muted smaller">
                How to remove duplicate lines of a file in Linux without sorting or changing their order (awk one-liner explained).
              </div>
           </div>
-        
-      
-        
+
+
+
           <div class="section-item">
             <div class="float-right ml-1">
-              
+
                 <span class="featured-ruby-weekly" title="Featured in Ruby Weekly" data-toggle="tooltip"><i class="fa fa-diamond"></i></span>
-              
+
             </div>
             <a href="/programming/2016/04/01/duckrails-guide">DuckRails - Open source development tool for mocking API endpoints</a>
              <div class="text-muted smaller">
                An introduction and a guide for installing and using DuckRails, a development tool for mocking API endpoints easily and dynamically. Docker image available.
              </div>
           </div>
-        
-      
+
+
 
       <div class="section-item">
         <a href="/programming/featured">View all featured posts</a>
@@ -1591,32 +1650,32 @@ _dothis_completions<span class="o">()</span>
 </div>
 
 
-  
+
 <div class="alert alert-primary">
   <div class="sidebar-section">
     <div class="section-title">
       <h4><i class="fa fa-bullhorn"></i> recent posts</h4>
     </div>
 
-    
+
 
     <div class="section-content">
-      
+
           <div class="section-item">
             <a href="/programming/2020/04/20/stup-cli-notes">stup - Daily notes in the terminal</a>
             <div class="text-muted smaller">Introducing a shell tool for saving, organizing and searching daily notes from the command line</div>
           </div>
-      
+
           <div class="section-item">
             <a href="/programming/2020/02/06/shell-palindrome-dates">Find palindrome dates in the Linux command line - explained</a>
             <div class="text-muted smaller">Explaining how to find palindrome dates using a shell command in Linux</div>
           </div>
-      
+
           <div class="section-item">
             <a href="/cats/2020/01/23/goodbye-irida">Goodbye Irida</a>
             <div class="text-muted smaller">A goodbye to my beloved cat</div>
           </div>
-      
+
     </div>
   </div>
 </div>
@@ -1653,14 +1712,14 @@ _dothis_completions<span class="o">()</span>
 </div>
 
 
-  
 
 
-  
+
+
     <div class="alert alert-primary d-none d-md-block">
       <div class="sidebar-section">
         <div class="section-content mt-2">
-          
+
 <div class="share-links">
   <a class="btn btn-light" href="https://twitter.com/intent/tweet?text=Creating a bash completion script&url=https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a>
   <a class="btn btn-light" href="https://facebook.com/sharer.php?u=https://iridakos.com/programming/2018/03/01/bash-programmable-completion-tutorial" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
@@ -1692,7 +1751,7 @@ _dothis_completions<span class="o">()</span>
         </div>
       </div>
     </div>
-  
+
 </div>
 <!--googleon: index-->
         </div>
@@ -1757,7 +1816,7 @@ _dothis_completions<span class="o">()</span>
   </div>
 </footer>
 
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="/assets/javascripts/bootstrap.min.js?1589349557254273487" type="text/javascript"></script>
