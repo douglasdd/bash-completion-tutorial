@@ -30,7 +30,7 @@ _dothis_completions()
 
   local commands_number=${DOTHIS_COMPLETION_COMMANDS_NUMBER:-50}
   local IFS=$'\n'
-  local suggestions=($(compgen -W "$(fc -l -$commands_number | sed 's/\t//')" -- "${COMP_WORDS[1]}"))
+  local suggestions=($(compgen -W "$(fc -l -$commands_number | sed $'s/\t//')" -- "${COMP_WORDS[1]}"))
 
   if [ "${#suggestions[@]}" == "1" ]; then
     local number="${suggestions[0]/%\ */}"
