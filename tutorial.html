@@ -504,7 +504,7 @@ So, we will use:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#/usr/bin/env bash</span>
 _dothis_completions<span class="o">()</span>
 <span class="o">{</span>
-  <span class="nv">COMPREPLY</span><span class="o">=(</span><span class="si">$(</span><span class="nb">compgen</span> <span class="nt">-W</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">fc</span> <span class="nt">-l</span> <span class="nt">-50</span> | <span class="nb">sed</span> <span class="s1">'s/\t//'</span><span class="si">)</span><span class="s2">"</span> <span class="nt">--</span> <span class="s2">"</span><span class="k">${</span><span class="nv">COMP_WORDS</span><span class="p">[1]</span><span class="k">}</span><span class="s2">"</span><span class="si">)</span><span class="o">)</span>
+  <span class="nv">COMPREPLY</span><span class="o">=(</span><span class="si">$(</span><span class="nb">compgen</span> <span class="nt">-W</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">fc</span> <span class="nt">-l</span> <span class="nt">-50</span> | <span class="nb">sed</span> <span class="s1">$'s/\t//'</span><span class="si">)</span><span class="s2">"</span> <span class="nt">--</span> <span class="s2">"</span><span class="k">${</span><span class="nv">COMP_WORDS</span><span class="p">[1]</span><span class="k">}</span><span class="s2">"</span><span class="si">)</span><span class="o">)</span>
 <span class="o">}</span>
 
 <span class="nb">complete</span> <span class="nt">-F</span> _dothis_completions dothis
